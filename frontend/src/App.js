@@ -22,7 +22,7 @@ function App () {
         </main>
         <footer className='row center'>
           All right reserved
-        </footer>
+        </footer>        
       </div>
     </BrowserRouter>
   )

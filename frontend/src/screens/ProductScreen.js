@@ -15,7 +15,7 @@ function ProductScreen (props) {
       <Link to='/'>Back to results</Link>
       <div className='row top'>
         <div className='col-2'>
-          <img src={product.image} alt={product.name} />
+          <img className='large' src={product.image} alt={product.name} />
         </div>
         <div className='col-1'>
           <ul>
@@ -59,11 +59,10 @@ function ProductScreen (props) {
               </li>
               <li>
                 <div className='row right'>
-                  <button className='add'>Add to Cart</button>
+                  <button className='add primary'>Add to Cart</button>
                 </div>
               </li>
             </ul>
-
           </div>
         </div>
       </div>
