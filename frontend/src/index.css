@@ -104,6 +104,10 @@ a.brand{
   margin-top: 2rem
 }
 
+.row.center{
+  align-items: center;
+}
+
 .row.top{
   align-items: flex-start;
 }
@@ -115,6 +119,10 @@ a.brand{
 .cart-row{
   display: flex;
   flex-wrap: wrap;
+}
+
+.item-row.text{
+  margin-top: 3.2rem;
 }
 
 .col-1{
@@ -204,6 +212,12 @@ button{
 button.primary{
   background-color: #f0c040;
   width: 100%;
+}
+
+button.alert{
+  background-color: #f0c040;
+  border: 0.1rem solid transparent;
+  margin-left: 2rem;
 }
 
 button.block{

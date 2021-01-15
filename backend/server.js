@@ -13,7 +13,6 @@ app.get('/api/products', (req, res) => {
 
 app.get('/api/products/:id', (req, res) => {
   const product = data.products.find((x) => x._id === req.params.id)
-  console.log(product)
   if (product) {
     res.send(product)
   } else {
