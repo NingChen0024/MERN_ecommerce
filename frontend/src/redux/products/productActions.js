@@ -40,8 +40,8 @@ export const detailsProduct = (productId) => async(dispatch) => {
   }catch(error){
     dispatch({
       type: PRODUCT_DETAILS_FAIL,
-      payload: error.responce && error.responce.data.message 
-      ? error.responce.data.message 
+      payload: error.response && error.response.data.message 
+      ? error.response.data.message 
       : error.message
     })
   }

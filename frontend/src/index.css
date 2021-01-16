@@ -105,7 +105,7 @@ a.brand{
 }
 
 .row.center{
-  align-items: center;
+  justify-content: center;
 }
 
 .row.top{
@@ -243,4 +243,45 @@ button:hover{
 .alert-danger {
   color: #a02020;
   background-color: pink;
+}
+
+/* Form */
+
+.form {
+  max-width: 30rem;
+  margin: 0 auto
+}
+
+.form > div {
+  display: flex;
+  flex-direction: column;
+  margin-top: 0.5rem;
+}
+
+.form label {
+  margin: 1rem 0;
+  display: block
+}
+
+/* dropdown */
+.dropdown {
+  display: inline-block;
+  position: relative
+}
+
+.dropdown-content {
+  position: absolute;
+  display: none;
+  right: 0;
+  min-width: 12rem;
+  padding: 1rem;
+  z-index: 1;
+  background-color: #203040;
+  margin: 0;
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block
 }
