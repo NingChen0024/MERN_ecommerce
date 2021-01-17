@@ -1,14 +1,15 @@
 import React from 'react'
 import HomeScreen from './screens/HomeScreen'
 import ProductScreen from './screens/ProductScreen'
-import { BrowserRouter, Route, Link } from 'react-router-dom'
+import { BrowserRouter, Route, Link, withRouter } from 'react-router-dom'
 import CartScreen from './screens/CartScreen'
 import { useDispatch, useSelector } from 'react-redux'
 import RegisterScreen from './screens/RegisterScreen'
 import SigninScreen from './screens/SigninScreen'
-import {userSignout} from './redux/user/userActions'
+import {clearUserRegister, userSignout} from './redux/user/userActions'
+import {clearCart} from './redux/cart/cartActions'
 
-function App () {
+function App (props) {
 
   const cart = useSelector(state => state.cart)
   const userSignin = useSelector(state => state.userSignin)
@@ -16,12 +17,14 @@ function App () {
   const { cartItems } = cart
   const {userInfo} = userSignin
 
-  const signoutHandler = () => {
+  const signoutHandler = (e) => {
     dispatch(userSignout())
+    dispatch(clearCart())
+    dispatch(clearUserRegister())
+    props.history.push('/')
   }
 
   return (
-    <BrowserRouter>
       <div className='grid-container'>
         <header className='row'>
           <div>
@@ -65,8 +68,7 @@ function App () {
           All right reserved
         </footer>        
       </div>
-    </BrowserRouter>
   )
 }
 
-export default App
+export default withRouter(App)

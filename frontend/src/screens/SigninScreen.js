@@ -14,7 +14,7 @@ function SigninScreen(props) {
   const {userInfo, loading, error} = userDetail
 
   const redirect = props.location.search 
-    ? props.location.saerch.split('=')[1]
+    ? props.location.search.split('=')[1]
     : '/'
 
   const dispatch = useDispatch()

@@ -1,4 +1,4 @@
-import { CART_ADD_REQUEST, CART_CHANGE_QTY, CART_DELETE_ITEM } from "./cartConstants";
+import { CART_ADD_REQUEST, CART_CHANGE_QTY, CART_CLEAR, CART_DELETE_ITEM } from "./cartConstants";
 
 const initialState = {
     cartItems: localStorage.getItem('cartItems') 
@@ -42,6 +42,12 @@ export const cartReducer = (state = initialState, action) => {
       return {
         ...state,
         cartItems: ItemsInCart
+      }
+
+    case CART_CLEAR:
+      return {
+        ...state,
+        cartItems:[]
       }
     default:
       return state
