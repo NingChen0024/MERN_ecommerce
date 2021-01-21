@@ -8,6 +8,7 @@ import RegisterScreen from './screens/RegisterScreen'
 import SigninScreen from './screens/SigninScreen'
 import {clearUserRegister, userSignout} from './redux/user/userActions'
 import {clearCart} from './redux/cart/cartActions'
+import ShippingAddressScreen from './screens/ShippingAddressScreen'
 
 function App (props) {
 
@@ -63,6 +64,7 @@ function App (props) {
           <Route path='/cart/:id?' component={CartScreen} />
           <Route path='/signin' component={SigninScreen} />
           <Route path='/register' component={RegisterScreen}/>
+          <Route path='/shipping' component={ShippingAddressScreen}/>
         </main>
         <footer className='row center'>
           All right reserved
